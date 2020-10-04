@@ -94,8 +94,9 @@ namespace xadrez
             {
                 mat[pos.linha, pos.coluna] = true;
             }
-
+                
             // #jogadaespecial roque
+            // jogda que o rei anda e troca de posição com outra peça 
             if (qteMovimentos == 0 && !partida.xeque)
             {
                 // #jogadaespecial roque pequeno

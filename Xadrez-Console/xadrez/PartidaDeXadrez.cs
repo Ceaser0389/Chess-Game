@@ -146,6 +146,7 @@ namespace xadrez
             Peca p = tab.peca(destino);
 
             // #jogadaespecial promocao
+            // jodada que devolve uma peça(aki sera a dama)
             if (p is Peao)
             {
                 if ((p.cor == Cor.Branca && destino.linha == 0) || (p.cor == Cor.Preta && destino.linha == 7))
@@ -177,7 +178,7 @@ namespace xadrez
                 mudaJogador();
             }
 
-            // #jogadaespecial en passant
+            // #jogadaespecial en passant (jogada que peão captura na lateral)
             if (p is Peao && (destino.linha == origem.linha - 2 || destino.linha == origem.linha + 2))
             {
                 vulneravelEnPassant = p;
